@@ -1,0 +1,178 @@
+*{
+padding:0;
+margin:0;
+}
+
+
+body, html {
+    height: 100%;
+
+  }
+
+  body{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Optimistic Display,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  }
+
+.root{
+    height: 100%;
+}
+.container{
+    margin-top: 200px;
+}
+
+
+header{
+    display: flex;
+    text-align: start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    gap:10px;
+    background-color: #fff;
+    
+} 
+
+.logo-header{
+    height:40px;
+    width:40px;
+    color:#077497;
+}
+
+
+.search {
+    display: flex;
+    width: 100%;
+    background: #ebecf0;
+    border: 2px solid #f5f5f11a;
+    border-radius: 30px;
+    padding: 5px 20px;
+    gap:10px;
+
+}
+ .search-input{
+    width: 100%;
+    border:0; 
+    outline:none;
+    background: inherit;
+} 
+
+.search-icon{
+    color:grey;
+    padding:7px 7px;
+}
+
+.space{
+flex-grow: 1;
+}
+
+.search-input-button{
+background-color: white;
+color: grey;
+border-radius: 3px;
+padding: 5px 10px;
+border: none;
+cursor:pointer;
+
+}
+
+
+
+.actions {
+    
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.actions a,.actions i {
+    padding:10px 20px; 
+    transition: background 0.1s ease;
+    text-decoration: none;
+    color:grey;
+    border-radius: 25px;
+}
+
+.actions a:hover,
+.actions i:hover {
+    background-color: #23272f0d;    
+} 
+
+
+.page-description{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+    line-height: 1.375;
+}
+.page-logo{
+    height:120px;
+    width:120px;
+    color:#077497;
+}
+
+.page-name{
+    color: black;
+    font-weight: 600;
+    font-size: 50px;   
+}
+
+.page-info{
+    max-width: 100%;
+    color: #404756;
+    font-size: 32px; 
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+
+.button-page-description{
+    flex-direction: row;
+    gap:10px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.button{
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    font-size: 17px;
+    text-decoration: inherit;
+    line-height: 1.375;
+    cursor: pointer;
+    font-weight: 600;
+    
+}
+
+.button-learn-react{
+    outline: 2px solid transparent;
+    color:white;
+    background-color: #087ea4;
+    border:none;
+    
+}
+
+.button-learn-react:hover{
+opacity: 0.8;
+   
+}
+
+.button-api-reference{
+color: black;
+background-color: white;
+border: 1px solid #e5e7eb;
+}
+
+.button-api-reference:hover{
+background-color: #78839b0d;
+}
