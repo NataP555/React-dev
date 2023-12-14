@@ -3,17 +3,31 @@
     margin: 0;
 }
 
-
 body,
 html {
     height: 100%;
-
 }
 
 body {
     font-size: 15px;
     font-weight: 500;
     font-family: Optimistic Display, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --grey800:#404756;
+    --grey700:#23272f;
+    --grey600:#23272f0d;
+    --grey500:#f5f5f11a;
+    --grey400:#5e6471;
+    --grey300:#404756;
+    --grey200:#99a1b3;
+    
+
+    --lightgrey100:#ebecf0;
+    --lightgrey200:#e5e7eb;
+    --lightgrey300:#78839b0d;
+    --blue200:#077497;
+    --blue100:#087ea4;
+    --white:white;
+    
 }
 
 .root {
@@ -21,10 +35,8 @@ body {
 }
 
 .container {
-    margin-top: 200px;
-    padding-bottom: 50px;
+   
 }
-
 
 header {
     display: flex;
@@ -35,26 +47,23 @@ header {
     left: 0;
     padding: 20px;
     gap: 10px;
-    background-color: #fff;
-
 }
 
 .logo-header {
     height: 40px;
     width: 40px;
-    color: #077497;
+    color: var(--blue100);
+    flex-grow: 1;
 }
-
 
 .search {
     display: flex;
     width: 100%;
-    background: #ebecf0;
-    border: 2px solid #f5f5f11a;
+    background: var(--lightgrey100);
+    border: 2px solid var(--grey500);
     border-radius: 30px;
     padding: 5px 20px;
     gap: 10px;
-
 }
 
 .search-input {
@@ -65,7 +74,7 @@ header {
 }
 
 .search-icon {
-    color: grey;
+    color: var(--grey400);
     padding: 7px 7px;
 }
 
@@ -74,8 +83,8 @@ header {
 }
 
 .search-input-button {
-    background-color: white;
-    color: grey;
+    background-color: var(--white);
+    color: var(--grey400);
     border-radius: 3px;
     padding: 5px 10px;
     border: none;
@@ -84,9 +93,7 @@ header {
 }
 
 
-
 .actions {
-
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -99,13 +106,13 @@ header {
     padding: 10px 20px;
     transition: background 0.1s ease;
     text-decoration: none;
-    color: grey;
+    color: var(--grey400);
     border-radius: 25px;
 }
 
 .actions a:hover,
 .actions i:hover {
-    background-color: #23272f0d;
+    background-color: var(--grey600);
 }
 
 
@@ -113,41 +120,41 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     margin-top: 150px;
     line-height: 1.375;
+    padding: 50px 20px;
 }
 
 .page-logo {
     height: 120px;
     width: 120px;
-    color: #077497;
+    color: var(--blue200);
 }
 
-.page-name {
-    color: black;
+h1{
+    color: var(--grey700);
     font-weight: 600;
     font-size: 50px;
 }
 
 .page-info {
     max-width: 100%;
-    color: #404756;
+    color: var(--grey300);
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 1.25rem;
 }
 
-
 .button-page-description {
+    display: flex;
     flex-direction: row;
     gap: 10px;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
-
-
+    width: 100%;
 }
 
 .button {
@@ -159,35 +166,32 @@ header {
     line-height: 1.375;
     cursor: pointer;
     font-weight: 600;
-
 }
 
 .button-learn-react {
     outline: 2px solid transparent;
-    color: white;
-    background-color: #087ea4;
+    color: var(--white);
+    background-color: var(--blue100);
     border: none;
-
 }
 
 .button-learn-react:hover {
     opacity: 0.8;
-
 }
 
 .button-api-reference {
     color: black;
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--white);
+    border: 1px solid var(--lightgrey200);
 }
 
 .button-api-reference:hover {
-    background-color: #78839b0d;
+    background-color: var(--lightgrey300);
 }
 
 
 
-.content-create-conainer {
+.section {
     background-image: conic-gradient(from 90deg at -10% 100%, #bcc1cd 0deg, #bcc1cd 90deg, #fff 1turn);
     contain: content;
     border-color: #23272f1a;
@@ -198,22 +202,12 @@ header {
     margin-top: 150px;
     line-height: 1.375;
     text-align: center;
-    padding: 0 15px;
+    padding: 50px 20px;
     gap:40px;
 }
 
 
-
-.content-create-title {
-    color: #23272f;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 1.15;
-    margin-bottom: 1.75rem;
-    max-width: 48rem;
-}
-
-.content-create-description {
+.description {
     color: #404756;
     line-height: 1.5;
     font-size: 20px;
@@ -252,17 +246,19 @@ header {
     box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
     flex: 1;
     background-color: white;
+    width:100%;
 }
 
 .video-code-create-description {
-    font-size: 13px;
-    color: #5e687e;
     background-color: #f5f6f8;
     padding: 15px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    font-size: 13px;
+    color: var(--grey200);
     
 }
+
 
 .video-code-create {
     color: #7e8184;
@@ -331,6 +327,7 @@ header {
     flex: 1;
     padding: 20px;
     height: 100%;
+    width: 100%;
 }
 
 .video-player-container{
@@ -355,8 +352,8 @@ header {
 }
 
 .video-player-container2{
-    background-color: white;
-    border: 1px solid #e5e7eb;
+    background-color: var(--white);
+    border: 1px solid var(--lightgrey200);
     border-radius: 15px;
 }
 
@@ -367,6 +364,11 @@ header {
 
 .video-inner-container > * {
     padding: 0 15px;
+}
+
+.example{
+    color: var(--grey200);
+    font-size: 13px;
 }
 
 .scroller{
@@ -385,10 +387,6 @@ header {
 }
 
 
-.video-player-tile h6 {
-    color: black;
-    font-size: 17px;
-}
 
 .my-video-description{
     display: flex;
@@ -419,23 +417,36 @@ header {
     
 }
 
-.content-create-description-cnt{
-    margin-top: 3rem;
-    color: #404756;
-    line-height: 1.5;
-    font-size: 20px;
-    max-width: 48rem;
-    margin-left: auto;
-    margin-right: auto;
-
+h4{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
 }
+
+h4 a{
+    text-decoration: none;
+    color: var(--grey700);
+}
+
+h5{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--grey700);
+}
+
+h6{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--grey700);
+}
+
+
 
 
 .button-add-react {
     border-radius: 25px;
     box-sizing: border-box;
     padding: 10px 30px;
-    margin-top: 50px;
     font-size: 17px;
     text-decoration: inherit;
     line-height: 1.375;
@@ -452,35 +463,6 @@ header {
   
 }
 
-.react-documentary{
-    background-image:url(https://react.dev/images/home/videos/documentary.webp) ;
-    background-size: contain;
-}
-
-
-.best-practices{
-background-image:url(https://react.dev/images/home/videos/rethinking.jpg);
-background-size: contain;
-}
-
-
-.introducing-native{
-    background-image:url(https://react.dev/images/home/videos/rn.jpg);
-    background-size: contain;
-
-}
-
-
-.introducing-hooks{
-    background-image:url(https://react.dev/images/home/videos/hooks.jpg);
-    background-size: contain;
-
-}
-
-.introducing-components{
-    background-image:url(https://react.dev/images/home/videos/rsc.jpg);
-    background-size: contain;
-}
 
 .react-video-history-description{
     display: flex;
@@ -534,6 +516,7 @@ background-size: contain;
 .section-platform{
     display: flex;
     gap: 15px;
+    margin-bottom: 80px;
 }
 
 
@@ -554,11 +537,18 @@ background-size: contain;
 .react-native-header-signs{
     display: flex;
     gap: 5px;
-    color:red;
+    color:var(--grey400);
+    padding: 7px;
 }
 
-.react-native-content{
-    padding:20px 70px;
+.react-native-content, .react-stay-true{
+    padding:40px 30px 60px 30px ;
+    text-align: left;
+}
+
+.react-stay-true{
+    background-image: conic-gradient(from 90deg at -10% 100%, #bcc1cd 0deg, #bcc1cd 90deg, #fff 1turn);
+    contain: content;
 }
 
 .react-logos{
@@ -578,38 +568,46 @@ background-size: contain;
     border: 1px solid #f5f5f11a;
     height: 60px;
     width:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .react-web{
     position:relative;
 }
 
+
 .section-news{
     display: flex; 
     width: 100%;
     gap: 40px;
-    padding: 100px;
+
 }
+
+
 .news-description{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    flex: 1;
     text-align: left;
     padding-left: 50px;
 }
 
 .article-container-wrapper{
+    flex: 1;
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 .article-container{
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto;
-    gap:30px;
+    gap:15px;
     border-radius: 10px;
     color: black;
+    padding:20px 100px 20px 20px;
 }
 
 .article-description{
@@ -631,6 +629,21 @@ background-size: contain;
     height:20px;
     width:20px;
 }
+
+h2{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.375;
+    color: var(--grey700);
+}
+
+h3{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.375;
+    color: var(--grey700);
+}
+
 
 
 .react-conf-image{
@@ -664,9 +677,10 @@ background-size: contain;
 }
 
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top:100px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:30px;
+    padding:100px 50px;
 }
 
 .footer-col{
@@ -677,10 +691,80 @@ background-size: contain;
 
 .footer-col a{
     text-decoration: none;
+    color: var(--grey400);
+}
+
+.title-footer-col a{
+    text-decoration: none;
+    color: var(--grey800);
+    font-weight: 700;
 }
 
 .footer-svg{
     display: flex;
     gap:5px;
     padding: 25px 3px;
+    color: var(--grey800);
+}
+
+.actions-menu{
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+@media (max-width:900px){
+    .actions-main{
+        display: none;
+    }
+    .actions-menu{
+        display: block;
+    }
+    .content-video-create{
+        flex-direction: column;
+    }
+    .section-platform{
+        flex-direction: column; 
+        gap:70px;
+    }
+    .section-news{
+        flex-direction: column;
+    }
+    .footer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 
+
+.search-action {
+    display: none;
+}
+
+
+
+@media (max-width:600px){
+    .search-action {
+        display: block;
+    }
+
+    .search {
+        display: none;
+    }
+    
+    .button-page-description{
+        flex-direction: column;
+    }
+
+    .button-learn-react,
+    .button-api-reference{
+        width: 100%;
+    }
+    .article-container{
+        grid-template-columns: 100%;
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
