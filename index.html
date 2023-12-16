@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>React</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -16,48 +17,169 @@
 <body>
     <div class="root">
 
-        <div class="container">
+        <div class="main-container">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <div class="header-content">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="logo-header" >
+                        <svg viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-header">
+                            <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
+                            <g stroke="currentColor" stroke-width="1" fill="none">
+                                <ellipse rx="10" ry="4.5"></ellipse>
+                                <ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
+                                <ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="search" placeholder="Search" class="search-input">
+
+                        <div class="space"></div>
+                        <button class="search-input-button"> Ctrl </button>
+                        <button class="search-input-button"> K </button>
+
+                    </div>
+
+                    <nav class="actions actions-main">
+                        <a href="#"> Learn </a>
+                        <a href="#"> Reference </a>
+                        <a href="#"> Community </a>
+                        <a href="#"> Blog </a>
+                    </nav>
+                    <nav class="actions">
+                        <div class="search-action">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <i class="fa-regular fa-moon"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </nav>
+                    
+                  </div>
+
+
+
+                  <div class="collapse" id="navbarNav">
+
+                    <div class="nav-bar-menue d-flex ">
+                        <a class="nav-link" href="#">Learn</a>  
+                        <a class="nav-link" href="#">Reference</a> 
+                        <a class="nav-link" href="#">Community</a> 
+                        <a class="nav-link" href="#">Blog</a> 
+                    </div>
+                      <hr class="hr">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> GET STARTED</a>
+                        </li>
+                          
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Quick Start</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Instalation</a>
+                        </li>
+
+                        <hr class="hr">
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> LEARN REACT</a>
+                        </li>
+                          
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Describing the UI</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Adding Interactivity</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Managing State</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Escapre Hatches</a>
+                        </li>
+                        
+                        <hr class="hr">
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> REACT API </a>
+                        </li>
+                          
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Hooks</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Componentes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">APIs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Legacy APIs</a>
+                        </li>
+
+                        <hr class="hr">
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> REACT DOM API </a>
+                        </li>
+                  
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Componentes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">APIs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Client APIs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Server APIs</a>
+                        </li>
+
+                        <hr class="hr">
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> GET INVOLVED </a>
+                        </li>
+                  
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">React Community</a>
+                        </li>
+
+                        <hr class="hr">
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"> STAY INFORMED </a>
+                        </li>
+                  
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">React Blog</a>
+                        </li>
+
+                    </ul>
+                  </div>
+                </div>
+            </nav>
 
             <header class="header">
-                <div class="actions actions-menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-
-                <div class="logo-header" >
-                    <svg viewBox="-10.5 -9.45 21 18.9" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-header">
-                        <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
-                        <g stroke="currentColor" stroke-width="1" fill="none">
-                            <ellipse rx="10" ry="4.5"></ellipse>
-                            <ellipse rx="10" ry="4.5" transform="rotate(60)"></ellipse>
-                            <ellipse rx="10" ry="4.5" transform="rotate(120)"></ellipse>
-                        </g>
-                    </svg>
-                </div>
-
-                <div class="search">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="search" placeholder="Search" class="search-input">
-
-                    <div class="space"></div>
-                    <button class="search-input-button"> Ctrl </button>
-                    <button class="search-input-button"> K </button>
-
-                </div>
-
-                <nav class="actions actions-main">
-                    <a href="#"> Learn </a>
-                    <a href="#"> Reference </a>
-                    <a href="#"> Community </a>
-                    <a href="#"> Blog </a>
-                </nav>
-                <nav class="actions">
-                    <div class="search-action">
-                      <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <i class="fa-regular fa-moon"></i>
-                    <i class="fa-brands fa-github"></i>
-                </nav>
-
+    
+               
 
             </header>
 
@@ -1092,7 +1214,7 @@
 
 
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
