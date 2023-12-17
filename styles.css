@@ -70,6 +70,7 @@ body {
     border-radius: 30px;
     padding: 5px 20px;
     gap: 10px;
+    cursor: pointer; 
 }
 
 .search-input {
@@ -77,6 +78,8 @@ body {
     border: 0;
     outline: none;
     background: inherit;
+   
+    
 }
 
 .search-icon {
@@ -94,7 +97,6 @@ body {
     border-radius: 3px;
     padding: 5px 10px;
     border: none;
-    cursor: pointer;
 
 }
 
@@ -217,6 +219,7 @@ h1{
     max-width: 48rem;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 400;
 }
 
 .create-react-components {
@@ -359,6 +362,16 @@ h1{
     border-bottom: 1px solid var(--lightgrey200);
 }
 
+.search-video-history{  
+    display: flex;
+    width: 100%;
+    background: var(--lightgrey100);
+    border: 2px solid var(--grey500);
+    border-radius: 30px;
+    padding: 5px 20px;
+    gap: 10px;
+}
+
 .video-inner-container > * {
     padding: 0 15px;
 }
@@ -379,6 +392,7 @@ h1{
     align-items: center;
     gap: 10px;
     color: var(--lightgrey600); 
+    cursor: pointer;
 }
 
 .my-video-description{
@@ -456,9 +470,7 @@ h6{
     color: #23272f;
 }
 
-.search-react-video-history{
-    width:90%;
-}
+
 
 
 .react-conf{
@@ -595,6 +607,7 @@ h6{
     border-radius: 15px;
     padding:20px 7px;
     text-align: left;
+    cursor: pointer;
 }
 .article:hover {
     background-color: var(--grey800);
@@ -669,6 +682,7 @@ footer a{
     color: var(--grey300);
     justify-content: flex-start;
     padding: 20px 0;
+    cursor: pointer;
 }
 
 .actions-menu{
@@ -716,7 +730,7 @@ footer a{
         display: block;
     }
 
-    .search {
+    .header-content > .search {
         display: none;
     }
     
@@ -731,5 +745,4 @@ footer a{
     .article-container{
         grid-template-columns: 100%;
     }
-
 }
