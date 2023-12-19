@@ -16,6 +16,7 @@ body {
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
     --black:#222222;
+    --grey800:#78839b0d;
     --grey700:#23272f;
     --grey600:#23272f0d;
     --grey650:#23272f1a;
@@ -26,12 +27,11 @@ body {
 
     --lightgrey100:#ebecf0;
     --lightgrey200:#e5e7eb;
-    --grey800:#78839b0d;
     --lightgrey400:#d0d3dc66;
     --lightgrey600:#757d90;
 
     --blue900:#2f00ff;
-    --blue300:(#139fcd);
+    --blue300:#139fcd;
     --blue200:#077497;
     --blue100:#087ea4;
 
@@ -77,9 +77,7 @@ body {
     width: 100%;
     border: 0;
     outline: none;
-    background: inherit;
-   
-    
+    background: inherit;   
 }
 
 .search-icon {
@@ -97,28 +95,30 @@ body {
     border-radius: 3px;
     padding: 5px 10px;
     border: none;
-
 }
 
 .actions {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     cursor: pointer;
 }
 
 
 .actions a,
-.actions i {
+.actions i
+{
     padding: 10px 20px;
-    transition: background 0.1s ease;
+    transition: all 0.1s ease;
     text-decoration: none;
     color: var(--grey400);
     border-radius: 25px;
 }
 
 .actions a:hover,
-.actions i:hover {
+.actions i:hover,
+.nav-bar-menue a:hover,
+.nav-link:hover  
+{
     background-color: var(--grey600);
 }
 
@@ -172,9 +172,8 @@ h1{
     font-size: 17px;
     text-decoration: inherit;
     line-height: 1.375;
-    cursor: pointer;
     font-weight: 600;
-}
+} 
 
 .button-learn-react {
     outline: 2px solid transparent;
@@ -362,15 +361,6 @@ h1{
     border-bottom: 1px solid var(--lightgrey200);
 }
 
-.search-video-history{  
-    display: flex;
-    width: 100%;
-    background: var(--lightgrey100);
-    border: 2px solid var(--grey500);
-    border-radius: 30px;
-    padding: 5px 20px;
-    gap: 10px;
-}
 
 .video-inner-container > * {
     padding: 0 15px;
@@ -379,6 +369,20 @@ h1{
 .example{
     color: var(--grey200);
     font-size: 13px;
+}
+
+
+.example-react-conf{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.update-icon{
+    color: var(--grey200); 
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
 }
 
 .scroller{
@@ -444,21 +448,20 @@ h6{
     color: var(--grey700);
 }
 
-.button-add-react {
+.button-react-more {
     border-radius: 25px;
     box-sizing: border-box;
     padding: 10px 30px;
     font-size: 17px;
     text-decoration: inherit;
     line-height: 1.375;
-    cursor: pointer;
     font-weight: 600;
-    color: var(--grey300);
+    color: var(--grey700);
     background-color: var(--white);
     border: 1px solid var(--lightgrey200); 
 }
 
-.button-add-react:hover {
+.button-react-more:hover {
     background-color: var(--grey800);
 }
 
@@ -478,17 +481,17 @@ h6{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:30px;
+    padding-top:40px;
+    padding-bottom: 10px;
 }
 
 .logo-react-conf{
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     color: var(--blue300);
 }
 
 .conf-year-selector{
- 
   display: flex;
   align-items: flex-start;
   width:100%;
@@ -497,7 +500,6 @@ h6{
 .conf-year{
     font-size: 24px;
     font-weight: 600;
-    padding-inline-end: 2rem;
     color: white;
     background-color: transparent;
     border: none;
@@ -683,6 +685,10 @@ footer a{
     justify-content: flex-start;
     padding: 20px 0;
     cursor: pointer;
+}
+
+.footer-svg svg:hover{
+    color: var(--grey700); 
 }
 
 .actions-menu{
