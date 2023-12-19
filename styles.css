@@ -325,7 +325,6 @@ h1{
     gap:10px;
     flex: 1;
     padding: 20px;
-    height: 100%;
     width: 100%;
 }
 
@@ -344,7 +343,7 @@ h1{
     display: flex;
     flex-direction: column;
     overflow:hidden auto;
-    max-height: 420px;
+    max-height: 475px;
     gap: 15px;
     padding: 15px 0;
     text-align: left;
@@ -706,6 +705,26 @@ footer a{
     width: 100%;
     color: var(--grey700);
 }
+
+.scroller-header {
+  max-height: 78vh;
+  overflow-y: auto;
+}
+
+.create-interface .video-player-wrapper{
+    height: 330px;
+}
+
+.write-components .video-player-wrapper,
+.add-interactivity .video-player-wrapper{
+    height: 430px;
+}
+
+.framework .video-player-wrapper{
+    height: 470px;
+}
+
+
 
 @media (max-width:900px){
     .actions-main{
